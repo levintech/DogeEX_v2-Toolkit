@@ -4,7 +4,7 @@ import { CogIcon } from "../../../components/Svg";
 import IconButton from "../../../components/Button/IconButton";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import MiniDogePrice from "./MiniDogePrice";
+import TreasurePrice from "./TreasurePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
@@ -39,7 +39,7 @@ const PanelFooter: React.FC<Props> = ({
   pushNav,
   toggleTheme,
   isDark,
-  miniDogePriceUsd,
+  treasurePriceUsd,
   currentLang,
   langs,
   setLang,
@@ -57,7 +57,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <MiniDogePrice miniDogePriceUsd={miniDogePriceUsd} />
+        <TreasurePrice treasurePriceUsd={treasurePriceUsd} />
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>

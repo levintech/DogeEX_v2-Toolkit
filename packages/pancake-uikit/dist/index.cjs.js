@@ -4110,8 +4110,8 @@ var SkeletonContainer = styled__default['default'].div(templateObject_2$4 || (te
 });
 var PriceLink = styled__default['default'].a(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  padding: 0 12px;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  padding: 0 12px;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var SubNavPrice = function (_a) {
-    var miniDogePriceUsd = _a.miniDogePriceUsd;
-    return miniDogePriceUsd ? (jsxRuntime.jsx(PriceContainer, { children: jsxRuntime.jsx(PriceLink, __assign({ href: "https://pancakeswap.finance/swap?outputCurrency=0xba07eed3d09055d60caef2bdfca1c05792f2dfad", target: "_blank" }, { children: jsxRuntime.jsx(Text, __assign({ color: "text", bold: true }, { children: "$" + miniDogePriceUsd.toFixed(10) }), void 0) }), void 0) }, void 0)) : (jsxRuntime.jsx(SkeletonContainer, { children: jsxRuntime.jsx(Skeleton, { width: 100, height: 32 }, void 0) }, void 0));
+    var treasurePriceUsd = _a.treasurePriceUsd;
+    return treasurePriceUsd ? (jsxRuntime.jsx(PriceContainer, { children: jsxRuntime.jsx(PriceLink, __assign({ href: "https://pancakeswap.finance/swap?outputCurrency=0xba07eed3d09055d60caef2bdfca1c05792f2dfad", target: "_blank" }, { children: jsxRuntime.jsx(Text, __assign({ color: "text", bold: true }, { children: "$" + treasurePriceUsd.toFixed(6) }), void 0) }), void 0) }, void 0)) : (jsxRuntime.jsx(SkeletonContainer, { children: jsxRuntime.jsx(Skeleton, { width: 100, height: 32 }, void 0) }, void 0));
 };
 var SubNavPrice$1 = React__default['default'].memo(SubNavPrice);
 var templateObject_1$8, templateObject_2$4, templateObject_3$2;
@@ -4182,7 +4182,7 @@ var StyledNavLink = styled__default['default'].div(templateObject_9 || (template
 var StyledNavLinkLabel = styled__default['default'].div(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  transition: color 0.4s;\n  flex-grow: 1;\n"])));
 var Menu = function (_a) {
     var _b;
-    var userMenu = _a.userMenu; _a.globalMenu; var isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, miniDogePriceUsd = _a.miniDogePriceUsd, activeItem = _a.activeItem, activeSubItem = _a.activeSubItem, links = _a.links, children = _a.children;
+    var userMenu = _a.userMenu; _a.globalMenu; var isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, treasurePriceUsd = _a.treasurePriceUsd, activeItem = _a.activeItem, activeSubItem = _a.activeSubItem, links = _a.links, children = _a.children;
     // const { isMobile, isTablet } = useMatchBreakpoints();
     // const isSmallerScreen = isMobile || isTablet;
     var isXl = useMatchBreakpoints().isXl;
@@ -4227,8 +4227,8 @@ var Menu = function (_a) {
                                     return (jsxRuntime.jsx(StyledNavLink, __assign({ isActive: entry.href === activeItem || entry.href === activeSubItem }, { children: jsxRuntime.jsx(MenuLink, __assign({ href: entry.href }, { children: jsxRuntime.jsx(StyledNavLinkLabel, { children: entry.label }, void 0) }), void 0) }), entry.href));
                                 }) }, void 0),
                             jsxRuntime.jsxs(ConnectContainer, { children: [jsxRuntime.jsx(Flex, { children: jsxRuntime.jsx(SubNavThemeSwitcher$1, { isDark: isDark, toggleTheme: toggleTheme }, void 0) }, void 0),
-                                    jsxRuntime.jsxs(Flex, { children: [jsxRuntime.jsx(SubNavPrice$1, { miniDogePriceUsd: miniDogePriceUsd }, void 0), userMenu] }, void 0)] }, void 0)] }, void 0)] }), void 0),
-            jsxRuntime.jsxs(BodyWrapper, { children: [jsxRuntime.jsx(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, miniDogePriceUsd: miniDogePriceUsd, pushNav: setIsPushed, links: links }, void 0),
+                                    jsxRuntime.jsxs(Flex, { children: [jsxRuntime.jsx(SubNavPrice$1, { treasurePriceUsd: treasurePriceUsd }, void 0), userMenu] }, void 0)] }, void 0)] }, void 0)] }), void 0),
+            jsxRuntime.jsxs(BodyWrapper, { children: [jsxRuntime.jsx(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, treasurePriceUsd: treasurePriceUsd, pushNav: setIsPushed, links: links }, void 0),
                     jsxRuntime.jsx(Inner, __assign({ isPushed: isPushed, showMenu: showMenu, isHome: isHome }, { children: children }), void 0),
                     jsxRuntime.jsx(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }, void 0)] }, void 0)] }, void 0));
 };

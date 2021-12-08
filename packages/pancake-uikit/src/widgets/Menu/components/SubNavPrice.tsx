@@ -6,7 +6,7 @@ import Skeleton from "../../../components/Skeleton/Skeleton";
 import Flex from "../../../components/Box/Flex";
 
 interface Props {
-  miniDogePriceUsd?: number;
+  treasurePriceUsd?: number;
 }
 
 const PriceContainer = styled.div`
@@ -51,14 +51,14 @@ const PriceLink = styled.a`
   }
 `;
 
-const SubNavPrice: React.FC<Props> = ({ miniDogePriceUsd }) => {
-  return miniDogePriceUsd ? (
+const SubNavPrice: React.FC<Props> = ({ treasurePriceUsd }) => {
+  return treasurePriceUsd ? (
       <PriceContainer>
         <PriceLink
           href="https://pancakeswap.finance/swap?outputCurrency=0xba07eed3d09055d60caef2bdfca1c05792f2dfad"
           target="_blank"
         >
-            <Text color="text" bold>{`$${miniDogePriceUsd.toFixed(10)}`}</Text>
+            <Text color="text" bold>{`$${treasurePriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
       </PriceContainer>
     ) : (

@@ -13,7 +13,7 @@ import { LinkLabel, LinkStatus, MenuEntry } from "./components/MenuEntry";
 import MenuLink from "./components/MenuLink";
 import { SvgProps } from "../../components/Svg";
 import * as IconModule from "./icons";
-import MiniDogePriceUsd from "./components/MiniDogePrice";
+import TreasurePriceUsd from "./components/TreasurePrice";
 import SubNavPrice from "./components/SubNavPrice";
 import SubNavThemeSwitcher from "./components/SubNavThemeSwitcher";
 import LangSelector from "./components/LangSelector";
@@ -139,7 +139,7 @@ const Menu: React.FC<NavProps> = ({
   langs,
   setLang,
   currentLang,
-  miniDogePriceUsd,
+  treasurePriceUsd,
   activeItem,
   activeSubItem,
   links,
@@ -219,7 +219,7 @@ const Menu: React.FC<NavProps> = ({
               {/* <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} /> */}
             </Flex>
             <Flex>
-              <SubNavPrice miniDogePriceUsd={miniDogePriceUsd} />
+              <SubNavPrice treasurePriceUsd={treasurePriceUsd} />
               {userMenu}
             </Flex>
           </ConnectContainer>
@@ -235,7 +235,7 @@ const Menu: React.FC<NavProps> = ({
           langs={langs}
           setLang={setLang}
           currentLang={currentLang}
-          miniDogePriceUsd={miniDogePriceUsd}
+          treasurePriceUsd={treasurePriceUsd}
           pushNav={setIsPushed}
           links={links}
         />

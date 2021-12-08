@@ -5,7 +5,7 @@ import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
 interface Props {
-  miniDogePriceUsd?: number;
+  treasurePriceUsd?: number;
 }
 
 const PriceLink = styled.a`
@@ -21,18 +21,18 @@ const PriceLink = styled.a`
   }
 `;
 
-const MiniDogePrice: React.FC<Props> = ({ miniDogePriceUsd }) => {
-  return miniDogePriceUsd ? (
+const TreasurePrice: React.FC<Props> = ({ treasurePriceUsd }) => {
+  return treasurePriceUsd ? (
     <PriceLink
       href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
       target="_blank"
     >
       <PancakeRoundIcon width="24px" mr="8px" />
-      <Text color="textSubtle" bold>{`$${miniDogePriceUsd.toFixed(5)}`}</Text>
+      <Text color="textSubtle" bold>{`$${treasurePriceUsd.toFixed(5)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
   );
 };
 
-export default React.memo(MiniDogePrice);
+export default React.memo(TreasurePrice);
